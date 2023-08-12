@@ -1724,6 +1724,7 @@ textarea {
 .tabs-product__inner .tabs__item.active {
   padding-bottom: 15px;
   color: var(--black-color);
+  font-weight: 600;
 }
 @media screen and (max-width: 1023.98px) {
   .tabs-product__inner .tabs__item.active {
