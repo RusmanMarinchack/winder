@@ -705,7 +705,7 @@ textarea {
 .header__burger span::before, .header__burger span::after {
   content: "";
   position: absolute;
-  top: 8px;
+  top: 6px;
   width: 100%;
   height: 2px;
   background: var(--light-green-color);
@@ -713,7 +713,7 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 .header__burger span::after {
-  top: -8px;
+  top: -6px;
 }
 
 .contact a:hover span {
@@ -1602,7 +1602,7 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 @media screen and (max-width: 1023.98px) {
   .tabs-product .tabs-product-header {
@@ -1665,7 +1665,7 @@ textarea {
 }
 @media screen and (max-width: 1023.98px) {
   .tabs-product__inner .tabs__header {
-    margin: 30px;
+    margin: 15px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -2118,6 +2118,9 @@ textarea {
   .our-works__swiper-wrapper {
     padding-bottom: 30px;
   }
+  .our-works__title {
+  margin-bottom: 30px;
+}
 }
 .our-works .slider-btn-box {
   height: 120px;
@@ -2244,6 +2247,9 @@ textarea {
 .testimonials__title {
   margin-bottom: 50px;
 }
+@media screen and (max-width: 1023.98px) {
+  margin-bottom: 20px;
+}
 .testimonials__wrapper {
   max-width: 1027px;
   margin: 0 auto;
@@ -2277,6 +2283,7 @@ textarea {
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
+    margin-bottom: 20px;
   }
 }
 .testimonials-top > *:not(:last-child) {
