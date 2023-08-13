@@ -1645,6 +1645,9 @@ textarea {
         -ms-flex-order: -1;
             order: -1;
   }
+  .tabs-product__body:not(:last-child) {
+    margin-bottom: 0;
+  }
 }
 @media screen and (max-width: 1023.98px) {
   .tabs-product__inner .tabs {
@@ -1665,7 +1668,7 @@ textarea {
 }
 @media screen and (max-width: 1023.98px) {
   .tabs-product__inner .tabs__header {
-    margin: 15px;
+    margin: 15px 15px 30px 15px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
