@@ -73,43 +73,6 @@ function mobSlideActive(cls) {
 mobSlideActive("brends__swiper-slide")
 window.addEventListener('resize', mobSlideActive("brends__swiper-slide"))
 
-
-// Перевірка на сенсорні екрани, і додаємо класс для body.
-const isMobile = {
-    Android: function() {
-        return navigator.userAgent.match(/Android/i);
-    },
-    BlackBorry: function() {
-        return navigator.userAgent.match(/BlackBorry/i);
-    },
-    IOS: function() {
-        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-    },
-    Opera: function() {
-        return navigator.userAgent.match(/Opera Mini/i);
-    },
-    Windows: function() {
-        return navigator.userAgent.match(/IEMobile/i);
-    },
-    any: function() {
-        return (
-            isMobile.Android() ||
-            isMobile.BlackBorry() ||
-            isMobile.IOS() ||
-            isMobile.Opera() ||
-            isMobile.Windows()
-        );
-    }
-};
-
-if (isMobile.any()){
-    document.body.classList.add('_touch');
-} else {
-    document.body.classList.add('_pc');
-}
-
-let events = document.body.classList.contains('_touch') ? 'click' : 'mousemove';
-
 // Робимо бургер меню.
 function burger() {
     let header = document.querySelector('.header')
@@ -181,68 +144,6 @@ function accardeonsSite() {
     }
 }
 accardeonsSite()
-
-
-// Робимо щоб під списки можна було відкривати по табу, якщо сенсорний екран.
-function touchSubList() {
-    let navItem = document.querySelectorAll('.sublist-item')
-
-    if(navItem.length > 0) {
-        if(document.body.classList.contains('_touch')) {
-            navItem.forEach(item => {
-                item.addEventListener('click', function() {
-                    this.classList.toggle('active')
-                })
-            })
-        }
-    }
-}
-touchSubList()
-
-
-// Робимо активні попапи посайту.
-function activePopap() {
-    let popapBtn = document.querySelectorAll('.popap-btn')
-
-    if(popapBtn.length > 0) {
-        popapBtn.forEach(btn => {
-            btn.addEventListener('click', function() {
-                let idPopap = this.dataset.id
-
-                if(idPopap) {
-                    let popap = document.querySelector(`#${idPopap}`)
-
-                    if(popap) {
-                        popap.classList.add('active')
-                        
-                        let btnClose = popap.querySelector('.popap__close')
-
-                        popap.addEventListener('click', function(e) {
-                            e.stopPropagation()
-                        })
-
-                        let popapShadow = popap.parentNode
-
-                        if(popapShadow) {
-                            popapShadow.classList.add('active')
-
-                            popapShadow.addEventListener('click', popapHidden)
-                            btnClose.addEventListener('click', popapHidden)
-
-                            function popapHidden() {
-                                popapShadow.classList.remove('active')
-                                popap.classList.remove('active')
-                            }
-                        }
-                    }
-                }
-            })
-        })
-    }
-} 
-activePopap()
-
-
 
 // Робимо таби по сайту.
 function heandlerTabs() {
