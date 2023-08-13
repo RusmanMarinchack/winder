@@ -2248,7 +2248,9 @@ textarea {
   margin-bottom: 50px;
 }
 @media screen and (max-width: 1023.98px) {
-  margin-bottom: 20px;
+  .testimonials__title {
+   margin-bottom: 20px; 
+  }
 }
 .testimonials__wrapper {
   max-width: 1027px;
